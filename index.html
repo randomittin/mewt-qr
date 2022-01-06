@@ -9,6 +9,7 @@
 
 <body>
     <div id="canvas"></div>
+    <button id="download" onClick='()=>{qrCode.download({ name: "qr", extension: "svg" });}' style="opacity:0;width:0;height:0;position:absolute;"></button>
     <script type="text/javascript">
         function getParameterByName(name, url = window.location.href) {
             name = name.replace(/[\[\]]/g, '\\$&');
@@ -40,7 +41,6 @@
             }
         });
         qrCode.append(document.getElementById("canvas"));
-//         qrCode.download({ name: "qr", extension: "svg" });
     </script>
 </body>
 
