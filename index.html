@@ -19,14 +19,14 @@
             if (!results[2]) return '';
             return decodeURIComponent(results[2].replace(/\+/g, ' '));
         }
-        const upi_id = getParameterByName('upi')
+        const m_id = getParameterByName('m_id')
         const receiver_name = getParameterByName('rname')
 
         const qrCode = new QRCodeStyling({
             width: 300,
             height: 300,
             type: "svg",
-            data: "upi://pay?cu=INR&pa=" + upi_id + "&pn=" + receiver_name,
+            data: "qr.mewt.in/" + m_id,
             image: "https://mewt.in/src/mewt_small_flat.svg",
             dotsOptions: {
                 color: "#444B54",
